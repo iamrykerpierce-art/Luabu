@@ -64,15 +64,12 @@ function Luabu.init()
 	
 	if script.Parent ~= ReplicatedStorage then warn("[Luabu] Luabu must be parented to ReplicatedStorage to work") return end
 	
-	Version = require(script:WaitForChild("Version"))
 	Enums = require(script:WaitForChild("Shared"):WaitForChild("Enums"))
 	TableManager = require(script:WaitForChild("Shared"):WaitForChild("TableManager"))
 	
 	if RunService:IsServer() then
+		Version = require(script:WaitForChild("Version"))
 		print("[Luabu] Version: " .. Version.Version)
-		if Version.Version ~= Version.LatestVersion then
-			warn("[Luabu] Luabu is outdated")
-		end
 	elseif RunService:IsClient() then
 		FlipBookImage = require(script:WaitForChild("Shared"):WaitForChild("FlipBookImage"))
 	end

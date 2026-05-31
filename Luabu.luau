@@ -105,8 +105,4 @@ function Luabu.ClearTables()
 	return TableManager.Clear()
 end
 
-function Luabu.CreateFlipBookImage(Name:string, ImgIdsList)
-	return FlipBookImage.Create(Name, ImgIdsList)
-end
-
 return Luabu

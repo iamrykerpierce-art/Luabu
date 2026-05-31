@@ -15,7 +15,6 @@ task.spawn(function()
 	if success then
 		local data = HttpService:JSONDecode(response)
 		Version.LatestVersion = data.version
-		print(data.version)
 		
 	if Version.Version ~= data.version then
 		warn("[Luabu] Luabu is outdated")

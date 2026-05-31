@@ -18,7 +18,6 @@ local initialized = false
 local Version
 local Enums
 local TableManager
-local FlipBookImage
 
 local function LoadPackages()
 	if #ClientPackages:GetChildren() == 0 then
@@ -70,8 +69,6 @@ function Luabu.init()
 	if RunService:IsServer() then
 		Version = require(script:WaitForChild("Version"))
 		print("[Luabu] Version: " .. Version.Version)
-	elseif RunService:IsClient() then
-		FlipBookImage = require(script:WaitForChild("Shared"):WaitForChild("FlipBookImage"))
 	end
 	
 	LoadPackages()
